@@ -21,7 +21,7 @@ $ ogr2ogr -f csv -dialect sqlite -sql "select AsGeoJSON(geometry) AS geom, * fro
 
 
 STEP 3:
-Upload the csv file to GCS
+> Upload the csv file to GCS
 ```shell
 $ gsutil -m cp *.csv gs://census_statcan/
 ```
