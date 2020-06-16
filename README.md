@@ -7,6 +7,7 @@ Storing large geojson files in buckets in Google Cloud Platform.
 Transfer to BigQuery to combine census files with M-Lab queries. 
 
 ## Add Census Data to BigQuery Viz
+- [Statistics Canada](https://www150.statcan.gc.ca/n1/en/type/data)
 
 STEP 1:
 ```shell
