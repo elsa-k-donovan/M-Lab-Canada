@@ -54,3 +54,10 @@ SELECT * EXCEPT(geom), SAFE.ST_GeogFromGeoJson(geom) AS polygon
 FROM demos.SOME_NAME
 ```
 
+## Combine Census Data with M-Lab Data on Big Query Geo Viz
+
+```shell
+SELECT polygon as zipcode
+FROM censusstatcan.demos.canada_zipcodes
+WHERE CDNAME ='Sherbrooke'
+```
