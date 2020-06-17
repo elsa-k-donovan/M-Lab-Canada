@@ -37,6 +37,7 @@ $ gsutil -m cp transformed.csv gs://census_statcan/
 
 STEP 4:
 > Create a dataset in BigQuery
+> (To be written in the Cloud Shell on Google Cloud Platform)
 ```shell
 $ bq mk demos
 ```
