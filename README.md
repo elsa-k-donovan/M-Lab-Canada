@@ -55,6 +55,7 @@ FROM demos.SOME_NAME
 ```
 
 ## Combine Census Data with M-Lab Data on Big Query Geo Viz
+> https://bigquerygeoviz.appspot.com/
 
 ```shell
 SELECT polygon as zipcode
