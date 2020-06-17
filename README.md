@@ -46,5 +46,11 @@ $ bq mk demos
 $ bq load --autodetect --replace demos.SOME_NAME gs://census_statcan/transformed.csv
 ```
 
-
+STEP 5:
+Add this SQL to BigQuery
+```shell
+CREATE OR REPLACE TABLE demos.CHOOSE_NEW_TABLE_NAME AS
+SELECT * EXCEPT(geom), SAFE.ST_GeogFromGeoJson(geom) AS polygon
+FROM demos.SOME_NAME
+```
 
