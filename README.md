@@ -17,7 +17,7 @@ $ brew install gdal
 
 
 STEP 2:
-> Shapefiles from StatCan are in ESRI format. The coordinate system needs to be converted to (lat, long) in order to be used in Big Query Geo Viz.
+> Coordinates from StatCan files are in ESRI format. The coordinate system needs to be converted to (lat, long) in order to be used in Big Query Geo Viz.
 
 ```shell
 $ ogr2ogr -t_srs EPSG:4326 -f “ESRI Shapefile” transformed.shp original.shp
