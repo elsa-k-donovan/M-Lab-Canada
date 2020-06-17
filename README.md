@@ -25,14 +25,25 @@ $ ogr2ogr -t_srs EPSG:4326 -f “ESRI Shapefile” transformed.shp original.shp
 
 
 ```shell
-$ ogr2ogr -f csv -dialect sqlite -sql "select AsGeoJSON(geometry) AS geom, * from lda_000b16a_e" polygon.csv lda_000b16a_e.shp
+$ ogr2ogr -f csv -dialect sqlite -sql "select AsGeoJSON(geometry) AS geom, * from transformed" transformed.csv transformed.shp
 ```
 
 
 STEP 3:
 > Upload the csv file to GCS
 ```shell
-$ gsutil -m cp *.csv gs://census_statcan/
+$ gsutil -m cp transformed.csv gs://census_statcan/
 ```
+
+STEP 4:
+> Create a dataset in BigQuery
+```shell
+$ bq mk demos
+```
+
+```shell
+$ bq load --autodetect --replace demos.SOME_NAME gs://census_statcan/transformed.csv
+```
+
 
 
