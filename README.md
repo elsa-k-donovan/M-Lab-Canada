@@ -45,9 +45,12 @@ CREATE OR REPLACE TABLE demos.CHOOSE_NEW_TABLE_NAME AS
 SELECT * EXCEPT(geom), SAFE.ST_GeogFromGeoJson(geom) AS polygon
 FROM demos.SOME_NAME
 ```
+## Visualize Census Data
+> https://bigquerygeoviz.appspot.com/
+
+
 
 ## Combine Census Data with M-Lab Data on Big Query Geo Viz
-> https://bigquerygeoviz.appspot.com/
 
 ```shell
 SELECT polygon as zipcode
