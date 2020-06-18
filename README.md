@@ -1,4 +1,4 @@
-## Add Census Data to BigQuery Viz
+## Add Census Data to BigQuery
 - Download the data from [Statistics Canada](https://www150.statcan.gc.ca/n1/en/type/data)
 
 STEP 1:
@@ -45,12 +45,12 @@ CREATE OR REPLACE TABLE demos.CHOOSE_NEW_TABLE_NAME AS
 SELECT * EXCEPT(geom), SAFE.ST_GeogFromGeoJson(geom) AS polygon
 FROM demos.SOME_NAME
 ```
-## Visualize Census Data
+## Visualize Census Data on BigQuery Geo Viz
 > https://bigquerygeoviz.appspot.com/
 
 
 
-## Combine Census Data with M-Lab Data on Big Query Geo Viz
+## Combine Census Data with M-Lab Data on BigQuery Geo Viz
 
 ```shell
 SELECT polygon as zipcode
