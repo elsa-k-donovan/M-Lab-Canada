@@ -46,7 +46,7 @@ SELECT * EXCEPT(geom), SAFE.ST_GeogFromGeoJson(geom) AS polygon
 FROM demos.SOME_NAME
 ```
 ## Visualize Census Data on BigQuery Geo Viz
-> https://bigquerygeoviz.appspot.com/
+> Open BigQuery Geo Viz: https://bigquerygeoviz.appspot.com/
 
 
 
