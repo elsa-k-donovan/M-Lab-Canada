@@ -59,6 +59,6 @@ FROM demos.SOME_NAME
 
 ```shell
 SELECT polygon as zipcode
-FROM censusstatcan.demos.canada_zipcodes
+FROM censusstatcan.demos.disseminationareas_2016
 WHERE CDNAME ='Sherbrooke'
 ```
