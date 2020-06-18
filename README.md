@@ -62,3 +62,18 @@ SELECT polygon as zipcode
 FROM censusstatcan.demos.disseminationareas_2016
 WHERE CDNAME ='Sherbrooke'
 ```
+
+> Join Canada Census and M-Lab Data
+```shell
+CREATE OR REPLACE TABLE censusstatcan.demos.federal_internet AS
+
+SELECT * except(PRNAME), 
+REPLACE(client.Geo.region, 'ON', 'Ontario') as province,
+FROM measurement-lab.ndt.unified_downloads a
+
+inner join (SELECT * FROM censusstatcan.demos.electoraldistricts_2016) b
+
+ON a.client.Geo.region = b.PRNAME
+
+WHERE a.client.Geo.region="ON"
+```
