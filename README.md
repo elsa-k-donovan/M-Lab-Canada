@@ -48,7 +48,7 @@ FROM demos.SOME_NAME
 ## Visualize Census Data on BigQuery Geo Viz
 > Open BigQuery Geo Viz: https://bigquerygeoviz.appspot.com/
 
-
+  ![alt-text](https://github.com/elsa-k-donovan/M-Lab-Canada/blob/master/census_example.png)
 
 ## Combine Census Data with M-Lab Data on BigQuery Geo Viz
 
