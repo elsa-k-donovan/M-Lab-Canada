@@ -47,7 +47,8 @@ FROM demos.SOME_NAME
 ```
 ## Visualize Census Data on BigQuery Geo Viz
 > Open BigQuery Geo Viz: https://bigquerygeoviz.appspot.com/
-Standard SQL:
+
+> Standard SQL:
 ```shell
 SELECT polygon as district
 
