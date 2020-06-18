@@ -63,7 +63,7 @@ FROM censusstatcan.demos.disseminationareas_2016
 WHERE CDNAME ='Sherbrooke'
 ```
 
-> Join Canada Census and M-Lab Data
+> Join Canada Census and M-Lab Data ///*WORK IN PROGRESS*//
 ```shell
 CREATE OR REPLACE TABLE censusstatcan.demos.federal_internet AS
 
