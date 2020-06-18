@@ -67,13 +67,15 @@ WHERE CDNAME ='Sherbrooke'
 ```shell
 CREATE OR REPLACE TABLE censusstatcan.demos.federal_internet AS
 
-SELECT * except(PRNAME), 
+SELECT 
+a.MeanThroughputMbps as downloadSpeed, 
+a.MinRTT,
 REPLACE(client.Geo.region, 'ON', 'Ontario') as province,
-FROM measurement-lab.ndt.unified_downloads a
+FROM measurement-lab.ndt.unified_downloads as x
 
-inner join (SELECT * FROM censusstatcan.demos.electoraldistricts_2016) b
+join (SELECT * FROM censusstatcan.demos.electoraldistricts_2016) b
 
-ON a.client.Geo.region = b.PRNAME
+ON x.client.Geo.region = b.PRNAME
 
-WHERE a.client.Geo.region="ON"
+WHERE b.PRNAME ="Ontario"
 ```
