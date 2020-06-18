@@ -47,6 +47,13 @@ FROM demos.SOME_NAME
 ```
 ## Visualize Census Data on BigQuery Geo Viz
 > Open BigQuery Geo Viz: https://bigquerygeoviz.appspot.com/
+Standard SQL:
+```shell
+SELECT polygon as district
+
+FROM censusstatcan.demos.electoraldistricts_2016
+WHERE PRUID=10
+```
 
   ![alt-text](https://github.com/elsa-k-donovan/M-Lab-Canada/blob/master/census_example.png)
 
